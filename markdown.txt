@@ -1,0 +1,115 @@
+A large-scale mod whose main goal is to port content from Risk of Rain 2 back to the original game. Some new content has been added as well with the goal of expanding ideas introduced by Risk of Rain 2 with content originating from Risk of Rain 1.
+
+Some aspects may be different than you remember - such changes were needed to translate the content to 2D! Such changes and additions are documented below.
+
+This mod, by nature of porting content from a game yet to be released, is work-in-progress. As a result, some features may be missing, incomplete, or experimental - though they are most likely in development and are on the way.
+
+##Additions
+Three new Survivors: **MUL-T**, **Artificer**, and **REX**!
+
+Elite enemies have new passive abilities influenced by Risk of Rain 2. Blazing and Overloading elites are largely unchanged, but other elites gain new abilities:
+
+- **Blazing** elites' attacks ignite their targets, which deal up to 10% of their HP per second over time.
+
+- **Overloading** elites leave behind electrical mines when attacking. Also, their HP is not comprised of 50% Shields.
+
+- **Leeching** elites will passively regain HP when out of combat.
+
+- **Frenzied** elites gain up to a +50% bonus to their attack and movement speed as their health drops, akin to the Energy Cell. You'd be surprised how much more threatening this makes them.
+
+- **Volatile** elites drop up to five bombs, Spite-style. These bombs do 100% a piece and bounce around much more erratically than Spite bombs, however.
+
+**Brand new Artifacts** unique to Return to Sender!
+
+- **Mountain:** Taking inspiration from the Shrine of the same name, the Mountain Artifact passively bumps up enemy spawn rates in return for increased rewards, gold, and experience.
+
+- **Vitality:** Enemies will begin to rapidly regenerate HP when not hit for 3 seconds.
+
+Over **30+ items** faithfully ported from Risk of Rain 2!
+
+Various stage objects, such as **Category Chests**, the **Shrine of the Mountain**, and **The Shrine of Order** will populate your game!
+
+**Lunar Coins** drop from enemies and carry over between runs!
+
+##Changes
+Some enemies gain new abilities.
+
+- Various enemies - such as the **Elder Lemurian** and **Ifrit** - will ignite their foes regardless of their Elite affix. Be careful when fighting them!
+
+- The **Magma Worm** fires two Magma Bombs upon breaching the ground. Likewise, the **Overloading Magma Worm** summons lightning bolts - you know, just to make your experience that much better.
+
+Certain aspects of Risk of Rain 2 content have been altered to better suit the 2D environment of Risk of Rain 1.
+
+- **Royal Capacitor**, rather than choosing a target based on the player's line of sight, now chooses a target based on the enemy last hit by the player.
+
+- **Energy Drink**, due to the lack of a sprinting mechanic in Risk of Rain 1, now provides its boost to speed after the player has been moving for 1.5 seconds.
+
+- **Wax Quail** and **Rose Buckler** now take effect when the player is moving, rather than sprinting.
+
+##Changelog
+### 0.9.2
+**Additions:**
+
+- Sounds ripped from ROR2 itself have been implemented in various places! Please note: when the sound files were ripped, they were not named properly as to denote when they should play, so as a result, some sounds may be incorrectly used or liable to be changed in the future.
+
+- Stone Golems and Snow Golems now fire lasers. Yay! Note: Stunning and fearing Golems will interrupt the lasers.
+
+- Glacial Elites have been added! They will slow you on hit and drop a Frost Bomb that stuns you on death.
+
+- Malachite Elites have been added! They'll appear later in runs and passively toss mines around, and inflict a status ailment that disables your health regeneration (for now. The status is still a WIP.). Look out!
+
+- The Fuel Array has been added, and can be obtained from your Escape Pod! REX's quest has not been implemented yet, so at the moment it's only good for challenges, and not much else.
+
+- The Teleporter now has *~cool~* sounds and visual effects.
+
+- Warhorn and Old Guillotine now have proc animations.
+
+- Timed Security Chest now spawns on the third stage (Ancient Valley and Sunken Tomb), which should make the Preon Accumulator obtainable.
+
+**Changes:**
+
+- MUL-T and Artificer now have new, correct sounds in place of old placeholder sounds.
+
+- Improved MUL-T's skill icons.
+
+- Preon Accumulator has proper wind-up animation, rather than firing instantaneously. Furthermore, the Beating Embryo effect on the Accumulator now makes the gun fire instantly, whereas before it made the projectile travel faster.
+
+- Blazing damage now has the correct DPS limit of 5% Max HP per second. It previously had a limit of 10% Max HP per second because I had the numbers wrong. Hopefully this makes Blazing elites easier to deal with.
+
+- Volatile Bombs: 200% => 100%. Volatile Bombs also are less randomly created. Previously, Volatile elites would randomly drop 2 to 5 bombs on death. Now, while they still drop 2 to 5 bombs, the amount of bombs they drop is now based on their HP prior to death. Hopefully this improves fighting Volatile elites and makes them less bullshit-game-ending.
+
+- Tweaked MUL-T's Auto-Nailgun; it now has a tighter spray, and fires slightly faster.
+
+- MUL-T's Rebar Puncher: 600% => 450%. MUL-T's Rebar Puncher is an interesting skill in that it's explicitly designed for a 3D environment. As such, a piercing 600% hitscan bullet works, because you have more dimensions to aim in. In 2D, however, enemies are almost always on the same plane you are, so a free 600% piercing hitscan bullet really doesn't make as much sense. This is open to change, however - I'd be more than willing to change it back if this was a poor change.
+
+- Reduced Artificer's Flamethrower's proc rate. It was a bit TOO high before, as RoR1 doesn't have any systems to adjust procs besides preventing them outright. Hopefully this makes Artificer's Flamethrower a bit more balanced.
+
+
+**Bugfixes:**
+
+- Sentient Meathook, REX's Tangling Growth, and Primordial Cube can no longer affect WormBody/WurmBody objects. Previously, this could cause Sentient Meathook to cause a cascade of procs, where it would latch onto segments of a Magma Worm, which would proc and create more meathooks, which would latch on to *more* Worm segments... You get the idea. It was kind of a mess.
+
+- Artificer's ENV Suit is temporarily disabled when using geysers. Previously, due to how ENV Suit works, Artificer would stop dead in the air due to ENV Suit kicking in after being launched up by a geyser.
+
+- MUL-T's inactive Use Item's cooldown should now count down properly. Previously, when MUL-T switched off of his active Use Item, the item's cooldown would not count unless it was active.
+
+- The Mountain Artifact icon is now properly displayed on the HUD.
+
+- Adjusted cooldown reduction math for Gesture of the Drowned so it more correctly reduces cooldowns.
+
+
+### 0.9.1
+
+- REX's Tangling Growth now no longer affects enemies' Y position.
+
+- Sentient Meathook (the object, not the item) now destroys itself if it has no parent.
+
+- Titanic Knurl, Queen's Gland, Halcyon Seed, and Little Disciple have been added to the Item Log. However, please keep in mind that as of this version, these items cannot be obtained legitimately and may or may not function properly. They will be properly obtainable and function normally in a future update. 
+
+- Elite enemies no longer cause mod errors.
+
+- Blazing damage is removed from actors on death. This caused players who died while Ignited to keep the status effect after revival, which was not very fun.
+
+### 0.9
+
+ First public release
